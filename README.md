@@ -244,5 +244,8 @@ Ejemplo: `v1.2.3`
 * **`release/<versión>`** → rama para preparar entregas, pruebas finales y documentación antes de pasar a `main`.
 * **`hotfix/<nombre>`** → rama para correcciones críticas que deben aplicarse directamente a `main` y luego integrarse en `develop`.
 
+Link Documento de Arquitectura Front: https://azure.microsoft.com/es-es/products/devops/?nav=min
+
+Link Mock figma: https://www.figma.com/design/TKNUp84l1RozukfoyXDn3s/SHIRA?node-id=0-1&t=bobieBeKtkaggFiV-1 
 
 
