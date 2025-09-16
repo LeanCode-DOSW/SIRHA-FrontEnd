@@ -17,3 +17,5 @@ Pantallas iniciales en baja fidelidad:
   - `hotfix/<nombre>`: correcciones críticas.  
   - `release/<versión>`: preparación de entregas.  
 
+Link Documento de Arquitectura Front: https://azure.microsoft.com/es-es/products/devops/?nav=min
+Link Mock figma: https://www.figma.com/design/TKNUp84l1RozukfoyXDn3s/SHIRA?node-id=0-1&t=bobieBeKtkaggFiV-1 
