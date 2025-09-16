@@ -138,16 +138,9 @@ Ejemplo en un componente:
 
 ```jsx
 /**
- * Componente Login
- * Permite al usuario ingresar al sistema con usuario y contraseña
+ * 
+ * 
  */
-function Login() {
-   // Estado local para manejar credenciales
-   const [user, setUser] = useState("");
-   const [password, setPassword] = useState("");
-
-   return (...)
-}
 ```
 
 ---
@@ -166,35 +159,13 @@ function Login() {
 ###  Desarrollo
 
 ```yaml
-on:
-  push:
-    branches: [ "develop" ]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: npm install
-      - run: npm run build
+
 ```
 
 ###  Producción
 
 ```yaml
-on:
-  push:
-    branches: [ "main" ]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: npm install
-      - run: npm run build
-      - name: Deploy to Azure
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: "sirha-frontend"
+
 ```
 
 ## Prototipo de bajo nivel
