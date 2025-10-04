@@ -1,9 +1,10 @@
-import Login from "./components/Login"
+//import Login from "./components/Login"
+import { Home } from "./components/home"
 function App() {
   
 
   return (
-    <Login />
+    <Home />
   )
 }
 
