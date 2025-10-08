@@ -12,7 +12,6 @@ function Login() {
         
         {/* Lado Izquierdo */}
         <div className="w-1/2 bg-red-400 flex flex-col items-center justify-center p-8">
-          {/* Icono calendario (puedes poner una imagen tuya) */}
           <div className="p-4 rounded-lg mb-6 flex items-center justify-center">
             <img src={Calendario} alt="calendario" className="w-24 h-24" />
           </div>

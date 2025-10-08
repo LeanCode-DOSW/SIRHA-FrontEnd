@@ -1,10 +1,13 @@
 //import Login from "./components/Login"
-import { Home } from "./components/home"
+//import { Home } from "./components/home"
+import { PlanDeEstudios } from "./components/planDeEstudios"
+//import { HorarioActual } from "./components/horarioActual"
 function App() {
   
 
   return (
-    <Home />
+    //<HorarioActual />
+    <PlanDeEstudios />
   )
 }
 
