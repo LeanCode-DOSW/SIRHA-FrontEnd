@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Semaforo from '../assets/33.png';
 import Horario from '../assets/11.png';
 import Historial from '../assets/22.png';
@@ -7,6 +8,8 @@ interface Props {
 }
 
 export const Home = ({ styles = '' }: Props) => {
+  const navigate = useNavigate();
+
   return (
     <div className={`flex flex-col items-center justify-start min-h-screen bg-red-100 pt-20 relative ${styles}`}>
       <h1 className="text-3xl font-bold text-red-900 mb-4">
@@ -36,14 +39,10 @@ export const Home = ({ styles = '' }: Props) => {
         </div>
       </div>
 
-      {/* Flecha para cambiar de página */}
+      {/* Flecha para ir a Home2 */}
       <button
         className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition-colors"
-        onClick={() => {
-          // aquí pones tu lógica de navegación, por ejemplo con react-router:
-          // navigate("/otraPagina")
-          console.log("Ir a la siguiente página");
-        }}
+        onClick={() => navigate("/home2")}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -58,3 +57,4 @@ export const Home = ({ styles = '' }: Props) => {
     </div>
   );
 };
+

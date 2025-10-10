@@ -1,18 +1,19 @@
-//import Login from "./components/Login"
-// import { Home } from "./components/home"
-//import { PlanDeEstudios } from "./components/planDeEstudios"
-//import { HorarioActual } from "./components/horarioActual"
-import { CrearSolicitud } from "./components/crearSolicitud"
-function App() {
-  
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./components/home";
+import { Home2 } from "./components/home2";
+import { CrearSolicitud } from "./components/crearSolicitud";
 
+function App() {
   return (
-   //< Login />
-    // < Home />
-    //<HorarioActual />
-    //<PlanDeEstudios />
-    <CrearSolicitud />
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home2" element={<Home2 />} />
+        <Route path="/crear-solicitud" element={<CrearSolicitud />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
+

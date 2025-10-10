@@ -1,53 +1,51 @@
-import { Input } from "./input";
+import { useNavigate } from "react-router-dom";
 
-interface Props {
-  styles?: string;
-}
+export const CrearSolicitud = () => {
+  const navigate = useNavigate();
 
-export const CrearSolicitud = ({ styles = "" }: Props) => {
   return (
-    <div
-      className={`flex flex-col items-center justify-start min-h-screen bg-rose-100 pt-20 relative ${styles}`}
-    >
-      <div className="flex flex-col bg-red-900 text-white p-8 rounded-xl shadow-lg w-full max-w-3xl">
-        
-        <h1 className="font-bold text-3xl text-center mb-8">
-          Solicitud de cambio de materia
-        </h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-red-100 relative">
+      <h1 className="text-3xl font-bold text-red-900 mb-6">
+        Crear nueva solicitud
+      </h1>
 
-        <div className="flex flex-col md:flex-row md:space-x-8 mb-8">
-          {/* Materia con problema */}
-          <div className="flex flex-col flex-1 space-y-4">
-            <h2 className="text-xl font-semibold mb-2">Materia con problema</h2>
-            <Input placeholder="Nombre" />
-            <Input placeholder="Grupo" />
-          </div>
+      <form className="bg-white p-8 rounded-2xl shadow-lg w-96">
+        <label className="block text-red-700 font-semibold mb-2">
+          Asunto:
+        </label>
+        <input
+          type="text"
+          className="w-full border border-red-300 rounded-md p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-red-400"
+          placeholder="Ej: Cambio de grupo"
+        />
 
-          {/* Sugerencia de cambio */}
-          <div className="flex flex-col flex-1 space-y-4 mt-6 md:mt-0">
-            <h2 className="text-xl font-semibold mb-2">Sugerencia de cambio</h2>
-            <Input placeholder="Materia destino" />
-            <Input placeholder="Grupo de destino" />
-          </div>
-        </div>
+        <label className="block text-red-700 font-semibold mb-2">
+          Descripción:
+        </label>
+        <textarea
+          className="w-full border border-red-300 rounded-md p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-red-400"
+          placeholder="Describe tu solicitud..."
+        ></textarea>
 
-        {/* Observaciones */}
-        <div className="flex flex-col mb-6">
-          <h2 className="text-lg mb-2">Observaciones adicionales</h2>
-          <textarea
-            placeholder="Escriba aquí los motivos o comentarios..."
-            className="w-full h-24 bg-rose-50 text-black rounded-lg p-3 resize-none focus:ring-2 focus:ring-rose-400 outline-none"
-          />
-        </div>
-
-        {/* Botón */}
         <button
-          type="button"
-          className="text-center bg-rose-200 text-red-900 font-semibold py-2 px-6 rounded-full w-40 mx-auto hover:bg-rose-300 transition"
+          type="submit"
+          className="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition-colors"
         >
-          Crear solicitud
+          Enviar
         </button>
-      </div>
+      </form>
+
+      {/* Botón para volver */}
+      <button
+        className="absolute top-6 left-1/2 -translate-x-1/2 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition-colors"
+        onClick={() => navigate("/home2")}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
     </div>
   );
 };
+
