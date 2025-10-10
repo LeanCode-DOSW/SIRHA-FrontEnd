@@ -1,18 +1,17 @@
 //import Login from "./components/Login"
-//import { Home } from "./components/home"
-import { Home2 } from "./components/home2"
+// import { Home } from "./components/home"
 //import { PlanDeEstudios } from "./components/planDeEstudios"
 //import { HorarioActual } from "./components/horarioActual"
-//import { HorarioAnterior } from "./components/horarioAnterior"
+import { CrearSolicitud } from "./components/crearSolicitud"
 function App() {
   
 
   return (
+   //< Login />
+    // < Home />
     //<HorarioActual />
     //<PlanDeEstudios />
-    //<Home />
-    <Home2 />
-    //<HorarioAnterior />
+    <CrearSolicitud />
   )
 }
 
