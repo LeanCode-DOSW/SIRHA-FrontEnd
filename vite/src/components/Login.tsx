@@ -1,15 +1,22 @@
-import Ladoder from '../assets/ladoder.png';
-import Calendario from '../assets/calendario.png';
-import Fondo from '../assets/fondo5.jpg';
+import { useNavigate } from "react-router-dom";
+import Ladoder from "../assets/ladoder.png";
+import Calendario from "../assets/calendario.png";
+import Fondo from "../assets/fondo5.jpg";
+
 function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate("/home"); // Navega al Home
+  };
+
   return (
     <div
       className="flex items-center justify-center h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${Fondo})` }}
     >
-      {/* Card */}
       <div className="flex rounded-2xl overflow-hidden shadow-lg w-[800px] h-[500px] bg-white">
-        
         {/* Lado Izquierdo */}
         <div className="w-1/2 bg-red-400 flex flex-col items-center justify-center p-8">
           <div className="p-4 rounded-lg mb-6 flex items-center justify-center">
@@ -20,27 +27,28 @@ function Login() {
             ¡BIENVENIDO A SHIRA!
           </h1>
 
-          {/* Inputs */}
-          <input
-            type="text"
-            placeholder="Usuario"
-            className="w-full mb-4 px-4 py-2 rounded bg-white text-gray-700 focus:outline-none"
-          />
-          <input
-            type="password"
-            placeholder="Contraseña"
-            className="w-full mb-6 px-4 py-2 rounded bg-white text-gray-700 focus:outline-none"
-          />
-
-          {/* Botón */}
-          <button className="w-full py-2 bg-white text-red-600 font-bold rounded-full hover:bg-gray-100 transition">
-            INGRESAR
-          </button>
+          <form onSubmit={handleLogin} className="w-full">
+            <input
+              type="text"
+              placeholder="Usuario"
+              className="w-full mb-4 px-4 py-2 rounded bg-white text-gray-700 focus:outline-none"
+            />
+            <input
+              type="password"
+              placeholder="Contraseña"
+              className="w-full mb-6 px-4 py-2 rounded bg-white text-gray-700 focus:outline-none"
+            />
+            <button
+              type="submit"
+              className="w-full py-2 bg-white text-red-600 font-bold rounded-full hover:bg-gray-100 transition"
+            >
+              INGRESAR
+            </button>
+          </form>
         </div>
 
         {/* Lado Derecho */}
         <div className="w-1/2 bg-red-500 flex items-center justify-center">
-          {/* Aquí va tu imagen abstracta */}
           <img
             src={Ladoder}
             alt="pintura"

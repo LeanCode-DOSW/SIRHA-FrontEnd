@@ -31,22 +31,29 @@ export const Home2 = ({ styles = '' }: Props) => {
         </div>
 
         {/* Estado Solicitudes */}
-        <div className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors">
+        <div
+          className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors cursor-pointer"
+          onClick={() => navigate("/estado-solicitudes")}
+        >
           <img src={Estado} alt="Estado solicitudes" className="w-40 h-40 mb-4 object-contain" />
           <h2 className="text-lg font-semibold">Estado Solicitudes</h2>
         </div>
 
         {/* Historial Solicitudes */}
-        <div className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors">
+        <div
+          className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors cursor-pointer"
+          onClick={() => navigate("/historial-solicitudes")}
+        >
           <img src={Historial} alt="Historial solicitudes" className="w-40 h-40 mb-4 object-contain" />
           <h2 className="text-lg font-semibold">Historial Solicitudes</h2>
         </div>
+
       </div>
 
       {/* Flecha para volver a Home */}
       <button
         className="absolute top-6 left-1/2 -translate-x-1/2 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition-colors"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/home")}
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
           viewBox="0 0 24 24" stroke="currentColor">
