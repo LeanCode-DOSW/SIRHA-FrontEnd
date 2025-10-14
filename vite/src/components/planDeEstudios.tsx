@@ -1,18 +1,34 @@
+import { useNavigate } from "react-router-dom";
 interface Props {
   styles?: string;
 }
 
 export const PlanDeEstudios = ({ styles = '' }: Props) => {
+  const navigate = useNavigate();
+
   return (
     <div className={`flex flex-col items-center justify-start min-h-screen bg-red-50 pt-16 ${styles}`}>
       <header className="w-full bg-red-800 text-center py-4 shadow-md relative">
         {/* Botón de retroceso */}
         <button
           aria-label="volver"
+          onClick={() => navigate(-1)}  // 👈 retrocede una página
           className="absolute left-4 top-3 w-10 h-10 rounded-full bg-white/90 shadow flex items-center justify-center hover:scale-105 transition"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 18L9 12L15 6" stroke="#9B1C1C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="#9B1C1C"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
 

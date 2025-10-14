@@ -26,7 +26,7 @@ export const Home2 = ({ styles = '' }: Props) => {
           className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors cursor-pointer"
           onClick={() => navigate("/crear-solicitud")}
         >
-          <img src={Crear} alt="Crear solicitud" className="w-40 h-40 mb-4 object-contain" />
+          <img src={Historial} alt="Crear solicitud" className="w-40 h-40 mb-4 object-contain" />
           <h2 className="text-lg font-semibold">Crear Solicitud</h2>
         </div>
 
@@ -44,7 +44,7 @@ export const Home2 = ({ styles = '' }: Props) => {
           className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors cursor-pointer"
           onClick={() => navigate("/historial-solicitudes")}
         >
-          <img src={Historial} alt="Historial solicitudes" className="w-40 h-40 mb-4 object-contain" />
+          <img src={Crear} alt="Historial solicitudes" className="w-40 h-40 mb-4 object-contain" />
           <h2 className="text-lg font-semibold">Historial Solicitudes</h2>
         </div>
 

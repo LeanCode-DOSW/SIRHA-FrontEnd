@@ -20,20 +20,29 @@ export const Home = ({ styles = '' }: Props) => {
       </h3>
 
       <div className="flex flex-wrap justify-center gap-8 mb-20">
-        {/* Tarjeta 1 */}
-        <div className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors">
+        {/* Tarjeta 1 - Horario Actual */}
+        <div
+          onClick={() => navigate("/horario-actual")}
+          className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors cursor-pointer"
+        >
           <img src={Horario} alt="Horario actual" className="w-40 h-40 mb-4 object-contain" />
           <h2 className="text-lg font-semibold">Horario Actual</h2>
         </div>
 
-        {/* Tarjeta 2 */}
-        <div className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors">
+        {/* Tarjeta 2 - Semestres anteriores */}
+        <div
+          onClick={() => navigate("/horario-anterior")}
+          className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors cursor-pointer"
+        >
           <img src={Historial} alt="Semestres anteriores" className="w-40 h-40 mb-4 object-contain" />
           <h2 className="text-lg font-semibold">Semestres Anteriores</h2>
         </div>
 
-        {/* Tarjeta 3 */}
-        <div className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors">
+        {/* Tarjeta 3 - Plan de estudios */}
+        <div
+          onClick={() => navigate("/plan-estudios")}
+          className="bg-red-400 text-white rounded-2xl w-64 h-64 flex flex-col items-center justify-center shadow-lg hover:bg-red-500 transition-colors cursor-pointer"
+        >
           <img src={Semaforo} alt="Plan de estudios" className="w-40 h-40 mb-4 object-contain" />
           <h2 className="text-lg font-semibold">Plan de estudios</h2>
         </div>
@@ -57,4 +66,3 @@ export const Home = ({ styles = '' }: Props) => {
     </div>
   );
 };
-
