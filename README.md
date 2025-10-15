@@ -122,12 +122,13 @@ npm test
 ```
 SIRHA-FrontEnd-DOSW/
 │── src/
-│   ├── components/   # Componentes reutilizables
-│   ├── pages/        # Vistas principales
-│   ├── services/     # Conexión API
-│   ├── tests/        # Pruebas unitarias
-│   ├── App.js        # Componente principal
-│   └── index.js      # Punto de entrada
+│   │
+│   ├── /components      Componentes reutilizables de UI
+│   ├── /pages           Páginas o vistas de la aplicación
+│   ├── /services        Lógica, API y manejo de datos
+│   ├── /styles          Estilos y hojas CSS/SCSS
+│   ├── App.jsx          Componente principal
+│   └── index.js         Punto de entrada de la app
 ```
 
 ---
