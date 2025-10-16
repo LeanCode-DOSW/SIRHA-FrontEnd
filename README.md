@@ -194,17 +194,7 @@ Pantallas iniciales en baja fidelidad:
 
 ###  Versionamiento
 
-* Se usará **Semantic Versioning (SemVer)**:
-
-  * **MAJOR**: cambios incompatibles con versiones anteriores.
-  * **MINOR**: nuevas funcionalidades compatibles.
-  * **PATCH**: correcciones de bugs y ajustes menores.
-
-Ejemplo: `v1.2.3`
-
-* `1` → versión mayor.
-* `2` → nuevas funcionalidades.
-* `3` → correcciones menores.
+Cada commit realizado debe seguir el siguiente template: “usuario institucional: Acción realizada”
 
 ---
 
