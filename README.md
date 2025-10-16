@@ -40,15 +40,19 @@ Este FrontEnd corresponde al sistema **SIRHA**, una plataforma diseñada para Fa
 ---
 
 ##  c. Diagrama de navegación del aplicativo
+### Estudiante
 
 ```mermaid
 graph TD;
-    Login[Login] --> Dashboard[Dashboard Principal];
-    Dashboard --> GestionUsuarios[Gestión de Usuarios];
-    Dashboard --> Reportes[Reportes];
-    Dashboard --> Configuracion[Configuración];
-    GestionUsuarios --> DetalleUsuario[Detalle Usuario];
-    Reportes --> ReporteIndividual[Reporte Detallado];
+   Login[Login] --> InfoAcademica[InfoAcademica];
+   InfoAcademica[InfoAcademica] --> HorarioActual[HorarioActual];
+   InfoAcademica[InfoAcademica] --> HorariosAnteriores[Horarios Anteriores];
+   InfoAcademica[InfoAcademica] --> PlanDeEstudios[Plan de estudios];
+   Login[Login] --> InfoSolicitudes[InfoSolicitudes];
+   InfoSolicitudes[InfoSolicitudes] --> CrearSolicitud[Crear Solicitud];
+   InfoSolicitudes[InfoSolicitudes] --> EstadoDeSolicitudes[Estado de solicitudes];
+   InfoSolicitudes[InfoSolicitudes] --> Historial[Historial];
+
 ```
 
  Explicación: el usuario inicia en **Login**, pasa al **Dashboard**, y desde allí navega a las diferentes secciones.
