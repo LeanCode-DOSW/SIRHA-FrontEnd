@@ -1,0 +1,30 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- checkout: self
+  displayName: 'Checkout del repositorio'
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: '22.20.0'   # Usa la versión que tu proyecto necesite
+  displayName: 'Configurar Node.js 18'
+
+- script: |
+    npm install
+  displayName: 'Instalar dependencias del proyecto'
+
+- script: |
+    npm run build
+  displayName: 'Construir la aplicación React'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(System.DefaultWorkingDirectory)/build'
+    artifactName: 'react-build'
+    publishLocation: 'Container'
+  displayName: 'Publicar artefacto del frontend (/build)'
